@@ -1,6 +1,5 @@
 #!/bin/bash
 # Wrote by JackScripter
-# Last update: May 11 2019 at 19:30
 
 if [[ "$1" =~ "-h" ]]; then
 	echo "Usage: ./tcplog.sh [interface] [protocols]"
@@ -64,4 +63,6 @@ for proto in $PROTOS; do
 		"telnet") screen -dmS $proto tcpdump -i $IFNET -w /sniff/%Y/%h/%d/${proto}/%H-%M-%S.pcap port 23 -C $BUFFER -G $ROTATE;;
 		"pxe") screen -dmS $proto tcpdump -i $IFNET -w /sniff/%Y/%h/%d/${proto}/%H-%M-%S.pcap port 4011 -C $BUFFER -G $ROTATE;;
 	esac
+	echo "$proto will be sniffed"
 done
+echo 'All sniffer started. Use "screen -list" to view them.'
