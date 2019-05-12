@@ -1,5 +1,5 @@
 # sniffnlog
-Sniffer using tcpdump but can log a large ammount of packets. By default, packets are logged in /sniff/YEAR/MONTH/DAY/. Inside this, the script will create folder for each protocol you choosed. The magic of this, sniffnlog will start multiple instance of tcpdump inside different screen session so you can have completely different configuration of tcpdump per protocol.
+Sniffer using tcpdump but can log a large amount of packets. By default, packets are logged in /sniff/YEAR/MONTH/DAY/. Inside this, the script will create folder for each protocol you chosed. The magic of this, sniffnlog will start multiple instance of tcpdump inside different screen session so you can have completely different configuration of tcpdump per protocol.
 
 Setup
 --
